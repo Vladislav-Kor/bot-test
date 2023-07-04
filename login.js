@@ -7,10 +7,10 @@ const puppeteer = require('puppeteer');
     try { await page.waitForSelector('.b-auth-form__form-group, .-empty')} catch (error) {console.log('кнопочки та и нет)');}
 
     await page.click('.b-auth-form__form-control')
-    await page.keyboard.type('admin')
+    await page.keyboard.type('')
     const elHandleArray = await page.$$('.b-auth-form__input-group',);
     await elHandleArray[elHandleArray.length-1].click();    
-    await page.keyboard.type('qaz123');
+    await page.keyboard.type('');
     await page.waitForTimeout(2500)
     const titleSelector = 'title';
     await page.waitForSelector(titleSelector);
